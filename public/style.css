@@ -86,6 +86,11 @@ form {
 	box-shadow: 2px 2px 4px #ccc;
 }
 
+.link-preview-container {
+	display: grid;
+	gap: 20px;
+}
+
 /* url box */
 .link-preview {
 	display: grid;
@@ -118,6 +123,7 @@ form {
 	border-top-right-radius: 0.3em;
 	border-bottom-right-radius: 0.3em;
 	transition: background-color 150ms ease;
+	position: relative;
 }
 .link {
 	text-decoration: none;
@@ -126,5 +132,12 @@ form {
 
 .link:hover .info {
 	background-color: var(--clr-300);
+}
+.webIcon {
+	object-fit: contain;
+	height: 25px;
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 /* url box end */
