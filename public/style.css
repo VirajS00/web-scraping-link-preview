@@ -120,6 +120,7 @@ form {
 	flex-direction: column;
 	padding-left: 10px;
 	padding-right: 15px;
+	padding-top: 10px;
 	border-top-right-radius: 0.3em;
 	border-bottom-right-radius: 0.3em;
 	transition: background-color 150ms ease;
