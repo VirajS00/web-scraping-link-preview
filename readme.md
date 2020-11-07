@@ -2,6 +2,6 @@
 
 #### Things to get link preview of
 
-[x] Get data from Wikipedia link
-[ ] Get Data from Youtube API
-[ ] Get data from Amazon link
+[x] Get data from Wikipedia link\n<br />
+[ ] Get Data from Youtube API\n<br />
+[ ] Get data from Amazon link<br />
