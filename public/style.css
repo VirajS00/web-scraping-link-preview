@@ -1,0 +1,130 @@
+:root {
+	--clr-500: #ccc;
+	--clr-800: #666;
+	--clr-200: #ededed;
+	--clr-300: #cfcfcf;
+	--clr-light: #fff;
+	--clr-dark: #000;
+	--clr-primary: #0079c9;
+	--clr-primary-100: #0068ad;
+	--font-primary: 'Open Sans', sans-serif;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--font-primary);
+}
+main {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+}
+.container {
+	width: 90%;
+	max-width: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.link-preview-container {
+	width: 100%;
+	max-width: 380px;
+	margin-top: 20px;
+}
+
+.title {
+	text-align: center;
+	padding: 30px 0;
+}
+form {
+	width: 100%;
+	max-width: 380px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.ta {
+	width: 100%;
+	height: 150px;
+	outline: none;
+	border: 1px solid var(--clr-500);
+	resize: none;
+	padding: 0.8em;
+	border-radius: 0.3em;
+	font-family: var(--font-primary);
+	font-size: 1rem;
+}
+
+.ta:focus {
+	border: 1px solid var(--clr-800);
+}
+
+.btn {
+	margin-top: 10px;
+	width: 100%;
+	border-radius: 0.3em;
+	padding: 10px;
+	border: none;
+	outline: none;
+	background-color: var(--clr-primary);
+	color: var(--clr-light);
+	font-size: 1rem;
+	font-family: var(--font-primary);
+}
+.btn:hover {
+	background-color: var(--clr-primary-100);
+}
+
+.btn:active {
+	box-shadow: 2px 2px 4px #ccc;
+}
+
+/* url box */
+.link-preview {
+	display: grid;
+	grid-template-areas:
+		'img title'
+		'img desc';
+}
+.url_img {
+	width: 120px;
+	height: 120px;
+	object-fit: cover;
+	grid-area: img;
+	border-top-left-radius: 0.3em;
+	border-bottom-left-radius: 0.3em;
+}
+.url-desc {
+	grid-area: desc;
+}
+.url-title {
+	grid-area: title;
+}
+.info {
+	background-color: var(--clr-200);
+	width: 100%;
+	height: 120px;
+	display: flex;
+	flex-direction: column;
+	padding-left: 10px;
+	padding-right: 15px;
+	border-top-right-radius: 0.3em;
+	border-bottom-right-radius: 0.3em;
+	transition: background-color 150ms ease;
+}
+.link {
+	text-decoration: none;
+	color: var(--clr-dark);
+}
+
+.link:hover .info {
+	background-color: var(--clr-300);
+}
+/* url box end */

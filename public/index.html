@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Web scrapping URL Preview</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<h1 class="title">Web scrapping url preview</h1>
+				<form action="">
+					<textarea
+						id="text"
+						class="ta"
+						placeholder="Type message with URLs here"
+					></textarea>
+					<input type="button" class="btn" value="URL Preview" />
+				</form>
+				<div class="link-preview-container">
+					<a href="" class="link" target="_blank">
+						<div class="link-preview">
+							<img
+								src="https://source.unsplash.com/random/150x100"
+								alt="url_desc"
+								class="url_img"
+							/>
+							<div class="info">
+								<h3 class="url-title">Title</h3>
+								<p class="url-desc">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Beatae dolore dolores obcaecati.
+								</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
