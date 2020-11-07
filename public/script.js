@@ -1,4 +1,9 @@
 const container = document.querySelector('.link-preview-container');
+const button = document.getElementById('submitButton');
+
+button.addEventListener('click', () => {
+	getUrlData();
+});
 
 const getUrlData = async () => {
 	const req = await fetch('/urlinfo');
@@ -44,5 +49,3 @@ const getUrlData = async () => {
 	container.appendChild(link);
 	console.log(data);
 };
-
-getUrlData();
