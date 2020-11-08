@@ -142,3 +142,32 @@ form {
 	bottom: 0;
 }
 /* url box end */
+
+.loader {
+	border: 6px solid #ccc;
+	border-top-color: var(--clr-primary);
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	align-self: center;
+	justify-self: center;
+	animation: loader 1s infinite linear;
+}
+
+@keyframes loader {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(90deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	75% {
+		transform: rotate(270deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

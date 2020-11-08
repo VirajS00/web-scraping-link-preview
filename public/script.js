@@ -21,6 +21,11 @@ button.addEventListener('click', () => {
 
 const getUrlData = async (link_url) => {
 	container.innerHTML = '';
+	const loader = document.createElement('div');
+	loader.classList.add('loader');
+
+	container.appendChild(loader);
+
 	let url_obj = link_url;
 	const req = await fetch('/urlinfo', {
 		method: 'post',
@@ -72,6 +77,7 @@ const getUrlData = async (link_url) => {
 
 		link.appendChild(preview);
 
+		container.innerHTML = '';
 		container.appendChild(link);
 	});
 };
