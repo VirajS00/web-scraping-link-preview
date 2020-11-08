@@ -33,7 +33,7 @@ module.exports = class getWiki {
 				const title = $('#firstHeading').text();
 				const shortDesc = $('.shortdescription').text();
 				const icon = 'icons/wikipedia.ico';
-				let img = $('.thumbimage')[0];
+				let img = $('.image:first-of-type > img')[0];
 				let image;
 				if (img === undefined) {
 					image = undefined;
