@@ -1,6 +1,6 @@
 # Display link previews by scraping the web
 
-#### Things to get link preview of
+#### Works with
 
 [x] Get data from Wikipedia link<br />
 [x] Get Data from Youtube link<br />
