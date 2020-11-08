@@ -77,7 +77,7 @@ const getUrlData = async (link_url) => {
 
 		link.appendChild(preview);
 
-		container.innerHTML = '';
+		loader.style.display = 'none';
 		container.appendChild(link);
 	});
 };
