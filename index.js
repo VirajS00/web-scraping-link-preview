@@ -2,7 +2,7 @@ const express = require('express');
 const getWiki = require('./getData');
 
 const app = express();
-const port = 3000 || process.env.PORT;
+
 app.use(express.static('public'));
 app.use(express.json());
 
@@ -17,6 +17,8 @@ app.post('/urlinfo', async (req, res) => {
 
 	res.send(await urlData);
 });
+
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
 	console.log(`Example app listening at http://localhost:${port}`);
