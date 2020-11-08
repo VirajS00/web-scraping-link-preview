@@ -141,6 +141,10 @@ form {
 	right: 0;
 	bottom: 0;
 }
+
+.link:last-of-type {
+	margin-bottom: 50px;
+}
 /* url box end */
 
 .loader {
