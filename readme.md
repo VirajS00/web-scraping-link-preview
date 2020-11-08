@@ -3,5 +3,5 @@
 #### Things to get link preview of
 
 [x] Get data from Wikipedia link<br />
-[ ] Get Data from Youtube API<br />
+[x] Get Data from Youtube link<br />
 [x] Get data from Amazon link<br />
