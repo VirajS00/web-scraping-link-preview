@@ -15,4 +15,4 @@
 <li>Google</li>
 </ul>
 <br />
-You can check out the app https://url-preview.herokuapp.com/
+You can check out the app here: https://url-preview.herokuapp.com/
