@@ -24,7 +24,7 @@ module.exports = class getWiki {
 	}
 	async getData() {
 		const regexWiki = /^https?\:\/\/([\w\.]+)wikipedia.org\/wiki\/([\w]+\_?)+/;
-		const amazonRegex = /^https:\/\/www\.amazon\.(com|in)\/.+/gim;
+		// const amazonRegex = /^https:\/\/www\.amazon\.(com|in)\/.+/gim;
 		const youtubeRegex = /^https:\/\/www\.youtube\.com\/.+/gim;
 		try {
 			const html = await this.getHtml();
@@ -41,11 +41,6 @@ module.exports = class getWiki {
 					image = 'https:' + img.attribs.src;
 				}
 				return { title, shortDesc, image, icon, url: this.url };
-			} else if (amazonRegex.test(this.url)) {
-				const title = $('#productTitle').text().trim();
-				const image = $('.a-dynamic-image:first-child').attr('src');
-				const icon = 'icons/amazon_logo_1_0.png';
-				return { title, image, icon, url: this.url };
 			} else if (youtubeRegex.test(this.url)) {
 				const title_full = $('title').text();
 				let title = title_full.substr(0, title_full.lastIndexOf(' - '));
