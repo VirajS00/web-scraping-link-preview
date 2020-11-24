@@ -93,10 +93,7 @@ form {
 
 /* url box */
 .link-preview {
-	display: grid;
-	grid-template-areas:
-		'img title'
-		'img desc';
+	display: flex;
 }
 .url_img {
 	width: 120px;
@@ -105,12 +102,6 @@ form {
 	grid-area: img;
 	border-top-left-radius: 0.3em;
 	border-bottom-left-radius: 0.3em;
-}
-.url-desc {
-	grid-area: desc;
-}
-.url-title {
-	grid-area: title;
 }
 .info {
 	background-color: var(--clr-200);
