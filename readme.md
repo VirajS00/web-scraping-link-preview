@@ -4,7 +4,6 @@
 
 - [x] Get data from Wikipedia link
 - [x] Get Data from Youtube link
-- [x] Get data from Amazon link
 
 <h3>Works with</h3>
 <ul>
