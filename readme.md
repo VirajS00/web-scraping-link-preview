@@ -8,8 +8,7 @@
 <h3>Works with</h3>
 <ul>
 <li>Wikipedia</li>
-<li>Amazon</li>
-<li>Google</li>
+<li>YouTube</li>
 </ul>
 <br />
 You can check out the app here: https://url-preview.herokuapp.com/
