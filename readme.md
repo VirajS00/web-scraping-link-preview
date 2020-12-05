@@ -2,11 +2,9 @@
 
 #### To Do
 
-[x] Get data from Wikipedia link<br />
-[x] Get Data from Youtube link<br />
-[x] Get data from Amazon link<br />
-<br />
-<br />
+- [x] Get data from Wikipedia link
+- [x] Get Data from Youtube link
+- [x] Get data from Amazon link
 
 <h3>Works with</h3>
 <ul>
