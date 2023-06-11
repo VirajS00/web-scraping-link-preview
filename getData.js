@@ -1,5 +1,4 @@
-const cheerio = require('cheerio');
-const fetch = require('node-fetch');
+const cheerio = require("cheerio");
 
 module.exports = class getWiki {
 	constructor(url) {
@@ -11,12 +10,12 @@ module.exports = class getWiki {
 			const htmlData = await req.text();
 			return htmlData;
 		} catch {
-			return 'error returning data';
+			return "error returning data";
 		}
 	}
 	getVideoId() {
-		let video_id = this.url.split('v=')[1];
-		let ampersandPosition = video_id.indexOf('&');
+		let video_id = this.url.split("v=")[1];
+		let ampersandPosition = video_id.indexOf("&");
 		if (ampersandPosition != -1) {
 			video_id = video_id.substring(0, ampersandPosition);
 		}
@@ -30,27 +29,27 @@ module.exports = class getWiki {
 			const html = await this.getHtml();
 			const $ = cheerio.load(html);
 			if (regexWiki.test(this.url)) {
-				const title = $('#firstHeading').text();
-				const shortDesc = $('.shortdescription').text();
-				const icon = 'icons/wikipedia.ico';
-				let img = $('.image:first-of-type > img')[0];
+				const title = $("#firstHeading").text();
+				const shortDesc = $(".shortdescription").text();
+				const icon = "icons/wikipedia.ico";
+				let img = $(".image:first-of-type > img")[0];
 				let image;
 				if (img === undefined) {
 					image = undefined;
 				} else {
-					image = 'https:' + img.attribs.src;
+					image = "https:" + img.attribs.src;
 				}
 				return { title, shortDesc, image, icon, url: this.url };
 			} else if (youtubeRegex.test(this.url)) {
-				const title_full = $('title').text();
-				let title = title_full.substr(0, title_full.lastIndexOf(' - '));
+				const title_full = $("title").text();
+				let title = title_full.substr(0, title_full.lastIndexOf(" - "));
 				let video_id = this.getVideoId();
 				const image = `https://img.youtube.com/vi/${video_id}/mqdefault.jpg`;
-				const icon = 'icons/youtube.png';
+				const icon = "icons/youtube.png";
 				return { title, image, icon, url: this.url };
 			}
 		} catch {
-			return { error: 'error returning values' };
+			return { error: "error returning values" };
 		}
 	}
 };
